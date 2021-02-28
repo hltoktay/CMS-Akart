@@ -1,0 +1,48 @@
+<div class="container">
+    <h2 style="text-align: center; font-weight: bold; color:black" class="breadcrumb-item active">- AKART DESIGN &
+        BUILD PROJECT -</h2>
+
+    {{#each projects}}
+
+
+    <!-- Start Single Project -->
+    <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mt-3">
+        <div class="project foo">
+            <div class="project__thumb">
+                <a href="">
+                    <img src="uploads/{{imagename}}" style="
+                        width:  500px;
+                        height: 180px;
+                        object-fit: cover;
+                        border-radius: 5px"
+                        alt="">
+                </a>
+                <div class="project__hover__info">
+                    <div class="project__action">
+                        <h2><a href="../projects/{{_id}}">{{sector}}</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    </div>
+
+     <!-- End Single Project -->
+
+
+    {{else}}
+
+    <div class="container">
+        <p>No Project yet listed</p>
+    </div>
+
+
+    {{/each}}
+</div>
+<div style="margin-top:50px">
+
+    {{> _address}}
+    {{> _footer}}
+</div>
+    

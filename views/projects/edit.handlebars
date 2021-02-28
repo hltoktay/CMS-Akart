@@ -1,0 +1,82 @@
+
+
+<div class="container">
+        <h2 class="p-2">Edit Akart Project</h2>
+
+{{!-- {{#each errors}}
+<div class="alert alert-danger">{{text}}</div>
+
+{{else}}
+
+{{/each}} --}}
+
+<div class="card card-body">
+
+<form action="/projects/{{project._id}}?_method=PUT" method="post" >
+    <div class="form-row">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="form-group col-md-6">
+            <label for="title">Project Title</label>
+            <input value="{{project.title}}" type="text" class="form-control" name="title" placeholder="Title" >
+        </div>
+        <div class="form-group col-md-6">
+            <label for="client">Client</label>
+            <input value="{{project.client}}" type="text" class="form-control" name="client" placeholder="Client" >
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="location">Location</label>
+            <input value="{{project.location}}" type="text" class="form-control" name="location" >
+        </div>
+        {{!-- <div class="form-group col-md-4">
+            <label for="date">Date</label>
+            <input type="text" class="form-control" name="date">
+        </div> --}}
+        <div class="form-group col-md-2">
+            <label for="surface">Surface</label>
+            <input value="{{project.surface}}" type="number" class="form-control" name="surface" >
+        </div>
+        <br>
+        <div class="form-group col-md-4">
+            <label for="website">Website</label>
+            <input value="{{project.website}}" type="text" class="form-control" name="website">
+        </div>
+        <div class="form-group col-md-4">
+            <label for="sector">Sector</label>
+            <select value="{{project.sector}}" id="inputState" class="form-control" name="sector" >
+                <option selected>Choose...</option>
+                <option value="Coffee-Restaurant">Coffee - Restaurant</option>
+                <option value="Bar">Bar</option>
+                <option value="Takeaway">Take-away</option>
+                <option value="Residantial-Home">Residantial - Home</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+        </div>
+         <div class="form-group col-md-2">
+            <label for="surface">Work</label>
+            <input value="{{project.work}}" type="text" class="form-control" name="work" >
+        </div>
+        <div class="form-group col-md-12">
+            <label for="details">Details</label>
+            <textarea value="{{project.details}}" class="form-control" name="details" rows="3">{{project.details}}</textarea>
+        </div>
+
+        {{!-- <div class="form-group col-md-12">
+                <label for="Select Image">Select Image: </label>
+                <input value="{{project.imagename}}" type="file" name="image" class="form-control-file">
+        </div> --}}
+
+    </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+
+</form>
+
+</div>
+</div>

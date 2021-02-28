@@ -1,0 +1,109 @@
+<!-- Body main wrapper start -->
+    <div class="wrapper">
+        <!-- Start Header Style -->
+        <div id="header" class="htc-header">
+            <!-- Start Header Top -->
+            <div class="htc__header__top bg__cat--1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <ul class="heaher__top__left">
+                                <li><i class="fa fa-envelope"></i>info@akart.co.uk</li>
+                                <li><a href="#"><i class="fa fa-phone"></i>(+44) 7456 159 369</a></li> 
+                                <li><a href="https://www.facebook.com/ak.art.58367"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                <li><a href="https://www.instagram.com/akartdesignbuild/"><i class="fa fa-instagram"></i>Instagram</a></li>                            
+                            </ul>                           
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
+                            <div class="header__top__right">
+                                <!-- <ul class="login-register">
+                                    <li><a href="login-register.html">LOGIN</a></li>
+                                    <li class="separator">/</li>
+                                    <li><a href="login-register.html">REGISTER</a></li>
+                                </ul> -->
+                                <div class="heaher__top__btn">
+                                    <a href="contact">Get Free Quato</a>
+                                </div>
+                                {{#if user}}
+                                 <div>
+                                    <li><a href="/projects">Projects</a></li>
+                                    <li><a href="/projects/add">Add Projects</a></li>
+                                </div>
+                                 <div class="">
+                                    <li><a href="/admin/logout">LOGOUT</a></li>
+                                </div>
+                                
+                                {{else}}
+                                 <div class="">
+                                    <li><a href="/admin/login">ADMIN</a></li>
+                                </div>
+                                
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+            <!-- End Header Top -->
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-7">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="/img/logo/akart-logo.png" alt="logo image">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-6 col-xs-5">
+                            <nav class="main__menu__nav  hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                     <li><a href="/">HOME</a></li>
+                                    <li><a href="about">ABOUT</a></li>
+                                   
+                                    <li class="drop"><a href="services">SERVICES</a>
+                                        {{!-- <ul class="dropdown">
+                                            <li><a href="interior-service">Interior Design</a></li>
+                                            <li><a href="construction-service">Construction</a></li>
+                                            <li><a href="project-management">Project Management</a></li>
+                                        </ul> --}}
+                                    </li>
+                                    <li class="drop"><a href="/all-projects">PROJECTS</a>
+                                        {{!-- <ul class="dropdown">
+                                            <li><a href="coffe-projects">Coffee - Restaurant</a></li>
+                                            <li><a href="bar-projects">Bar</a></li>
+                                            <li><a href="take-away-project">Take-away </a></li>
+                                            <li><a href="residantial-project">Residantial - Home</a></li>
+                                            <li><a href="commercial-project">Commercial</a></li>
+                                        </ul> --}}
+                                    </li>
+                                    <li><a href="contact">CONTACT</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                        <li><a href="/">Home</a>
+                                        </li>
+                                        <li><a href="about">ABOUT</a></li>
+                                        <li><a href="/all-projects">PROJECTS</a>
+                                        </li>
+                                        <li><a href="/contact">contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div> 
+                        </div>
+                        <div class="col-md-2 col-sm-6 hidden-xs">
+                            <div class="htc__header__search">
+                                <input type="text" placeholder="SEARCH">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </div>

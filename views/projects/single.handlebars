@@ -1,0 +1,141 @@
+<section class="container">
+    {{!-- {{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+
+    {{else}}
+
+    {{/each}} --}}
+    <h2 style="text-align: center; font-weight: bold" class="breadcrumb-item active">- {{project.title}} -</h2>
+
+    <form action="/projects/{{project._id}}?_method=PUT" method="post">
+        <div class="form-row">
+
+            <input type="hidden" name="_method" value="PUT">
+            <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 mt-3">
+                <div class="htc__single__service">
+                    <div class="htc__single__service__tab">
+                        <div class="ht-portfolio-pic-show">
+                            <div class="ht-portfolio-full-image tab-content">
+                                <div role="tabpanel" class="tab-pane fade in active" class="big-image" id="img-tab-1">
+                                    <img src="/uploads/{{project.imagename}}" style="width: 100%;" alt="">
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="img-tab-2">
+                                    <img src="/uploads/{{project.s1}}" alt="full-image   ">
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="img-tab-3">
+                                    <img src="/uploads/{{project.s2}}" alt="full-image">
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade" id="img-tab-4">
+                                    <img src="/uploads/{{project.s3}}" alt="full-image">
+                                </div>
+                            </div>
+                        </div>  
+                        <!-- Start Small images -->
+                        <div class="ht__service__small__image nav nav-tabs clearfix">
+                            <ul role="tablist" class="prodict-det-small  clearfix">
+                                <li role="presentation" class="pot-small-img img-tab-2 active">
+                                    <a href="#img-tab-2" class="small-image" role="tab" data-toggle="tab">
+                                        <img src="/uploads/{{project.s1}}" style="width: 100%;" alt="">
+                                    </a>
+                                </li>
+                                <li role="presentation" class="pot-small-img img-tab-3">
+                                    <a href="#img-tab-3" class="small-image" role="tab" data-toggle="tab">
+                                        <img src="/uploads/{{project.s2}}" style="width: 100%;" alt="">
+                                    </a>
+                                </li>
+                                <li role="presentation" class="pot-small-img img-tab-4">
+                                    <a href="#img-tab-4" class="small-image" role="tab" data-toggle="tab">
+                                        <img src="/uploads/{{project.s3}}" style="width: 100%;" alt="">
+                                    </a>
+                                </li>
+                                <li role="presentation" class="pot-small-img img-tab-1">
+                                    <a href="#img-tab-1" class="small-image" role="tab" data-toggle="tab">
+                                        <img src="/uploads/{{project.s4}}" style="width: 100%;" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Small images -->
+                    </div>
+                </div>
+   
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="single__project__rightsidebar">
+                    <!-- Start Single Item -->
+                    <div class="pro__dtl__inner bg__gray">
+                        <h2>PROJECT DETAILS</h2>
+                        <div class="pro__dtl__content">
+                            <ul class="pro__dtl__list font__bold">
+                                <li>CLIENT: </li>
+                                <li>LOCATION:</li>
+                                <li>SURFACE:</li>
+                                <li>Website:</li>
+                                <li>SECTOR:</li>
+                                <li>WORK:</li>
+                            </ul>
+                            <ul class="pro__dtl__list">
+                                <li>{{project.client}}</li>
+                                <li>{{project.location}}</li>
+                                <li>{{project.surface}} m²</li>
+                                <li>{{project.website}}</li>
+                                <li>{{project.sector}}</li>
+                                <li>{{project.work}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+    </form>
+
+
+
+
+    <div class="col-md-12">
+        <div class="htc__pro__desc__container">
+            <!-- start Single Details -->
+            <div class="single__project__details">
+                <h2>{{project.work}}</h2>
+                <p>{{project.details}}</p>
+            </div>
+            <!-- End Single Details -->
+            <!-- start Single Details -->
+            <div class="single__project__details">
+                <h2>PROJECT DESCRIPTION</h2>
+                <p>Our project management services cover the whole project, from inception to completion. We treat each
+                    project as unique and we maintain momentum, which we see as two of the keys to project success.</p>
+                <p>Akart Ltd. is an well-established interior architecture practice working with brands, businesses and
+                    private clients who share their passion for detail, craft and refinement.</p>
+            </div>
+            <!-- End Single Details -->
+            <!-- start Single Details -->
+            <div class="single__project__details">
+                <h2>IMPORTANT FACTS</h2>
+                <p>As a Akart Design&Build team We would like to share some important facts:</p>
+                <ul class="facts__list">
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i>We always care our staff safety and our
+                            main
+                            priorty to keep area safe.</a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right"></i>It's really important fact that completed
+                            the
+                            project on the time.</a></li>
+                </ul>
+            </div>
+            <!-- End Single Details -->
+        </div>
+               {{> _logos}}
+   
+
+
+    </div>
+  
+</section>
+
+
+    {{> _address}}
+    {{> _footer}}
+
+
+
+   
